@@ -1,6 +1,13 @@
-import { motion, AnimatePresence } from "motion/react";
-import { X, ArrowLeft, ExternalLink, Calendar, User, Clock } from "lucide-react";
-import { Project } from "./Projects";
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  ExternalLink,
+  User,
+  X,
+} from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import { type Project } from "./Projects";
 import { Button } from "./ui/button";
 
 interface ProjectDetailProps {
@@ -56,7 +63,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            
+
             {/* Title Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-12">
               <motion.div
@@ -95,7 +102,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                 <div className="text-white">{project.client}</div>
               </div>
             )}
-            
+
             <div className="p-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-yellow-500 flex items-center justify-center">
@@ -227,7 +234,9 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="p-8 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-yellow-500/10 backdrop-blur-xl rounded-2xl border border-white/20"
               >
-                <h3 className="text-xl mb-4 text-white">Interested in working together?</h3>
+                <h3 className="text-xl mb-4 text-white">
+                  Interested in working together?
+                </h3>
                 <p className="text-white/70 mb-6 text-sm leading-relaxed">
                   Let's create something amazing for your brand.
                 </p>
@@ -235,7 +244,9 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                   onClick={() => {
                     onClose();
                     setTimeout(() => {
-                      document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                      document
+                        .querySelector("#contact")
+                        ?.scrollIntoView({ behavior: "smooth" });
                     }, 300);
                   }}
                   className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-xl"

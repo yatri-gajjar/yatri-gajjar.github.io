@@ -1,4 +1,4 @@
-import { Command as CommandPrimitive } from "cmdk@1.1.1";
+import { Command as CommandPrimitive } from "cmdk";
 import { SearchIcon } from "lucide-react";
 import * as React from "react";
 
